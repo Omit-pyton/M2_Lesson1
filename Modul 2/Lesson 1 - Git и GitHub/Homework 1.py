@@ -16,9 +16,11 @@ while k < play and word_exp != word:
     letter = letter.lower()
     for num in range(len(word)):
         if word[num] == letter:
+            k -= 1
             word_exp[num] = letter
-    s = "".join(word_exp)
+        s = "".join(word_exp)
     print(s)
+
     if s == word:
         print("Поздравляю! Вы угадали слово!")
         break
